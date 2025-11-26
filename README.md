@@ -32,10 +32,10 @@ struct MyVideoView: View {
     var body: some View {
         VideoPlayerSDK.createPlayerView(
             credentials: VideoPlayerCredentials(
-               email: "user@example.com ,  // "accounts@dangal.com",
+               email: "user@example.com ,  // "user@exmple.com",
                 password: "your password",  //  "12345678",
-                contentId: "Your content id"  //  "dangal",
-                packageName: "Your package Id" //"com.dangalplay.tv",
+                contentId: "Your content id"  //  "contnt",
+                packageName: "Your package Id" //"com.explale.app",
                 deviceId: "custom-device-id" // Optional, auto-generated if nil
             ),
             autoplay: false
@@ -72,10 +72,10 @@ struct MyVideoView: View, VideoPlayerSDKDelegate {
     var body: some View {
         VideoPlayerSDK.createPlayerView(
             credentials: VideoPlayerCredentials(
-                email: "user@example.com ,  // "accounts@dangal.com",
+                email: "user@example.com ,  // "user@exmple.com",
                 password: "your password",  //  "12345678",
-                contentId: "Your content id"  //  "dangal",
-                packageName: "Your package Id" //"com.dangalplay.tv",
+                contentId: "Your content id"  //  "contnt",
+                packageName: "Your package Id" //"com.explale.app",
                 deviceId: "custom-device-id" // Optional, auto-generated if nil
             ),
             autoplay: true,
