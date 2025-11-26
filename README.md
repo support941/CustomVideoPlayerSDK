@@ -32,7 +32,6 @@ struct MyVideoView: View {
     var body: some View {
         VideoPlayerSDK.createPlayerView(
             credentials: VideoPlayerCredentials(
-                appId: "67c6982f43d63",
                 email: "accounts@dangal.com",
                 password: "12345678",
                 contentId: "dangal",
@@ -72,7 +71,6 @@ struct MyVideoView: View, VideoPlayerSDKDelegate {
     var body: some View {
         VideoPlayerSDK.createPlayerView(
             credentials: VideoPlayerCredentials(
-                appId: "67c6982f43d63",
                 email: "accounts@dangal.com",
                 password: "12345678",
                 contentId: "dangal",
@@ -119,7 +117,6 @@ struct ContentView: View {
             // Add video player
             VideoPlayerSDK.createPlayerView(
                 credentials: VideoPlayerCredentials(
-                    appId: "your-app-id",
                     email: "user@example.com",
                     password: "password",
                     contentId: "content-id",
