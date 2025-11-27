@@ -1,5 +1,21 @@
 # CustomVideoPlayerSDK
 
+📦 Installation (Swift Package Manager)
+Swift Package Manager
+
+Add the package to your project using Xcode:
+
+Open Xcode → File → Add Packages…
+
+Enter the package URL in the search field:
+
+https://github.com/support941/CustomVideoPlayerSDK.git
+
+
+Select the version rule (e.g., Up to Next Major)
+
+Click Add Package
+
 A Swift SDK for playing DRM-protected video content with DoveRunnerFairPlay support.
 
 Add DoveRunnerFairPlay.xcframwork to your project framework to play the DRM protected content.
