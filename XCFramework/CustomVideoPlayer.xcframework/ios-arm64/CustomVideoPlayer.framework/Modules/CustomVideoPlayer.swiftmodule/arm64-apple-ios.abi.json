@@ -6,6 +6,751 @@
     "children": [
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoPlayerVMType",
+        "printedName": "VideoPlayerVMType",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP4playyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP4playyyF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP5pauseyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP5pauseyyF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "togglePlayPause",
+            "printedName": "togglePlayPause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP15togglePlayPauseyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP15togglePlayPauseyyF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isPlaying",
+            "printedName": "isPlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvp",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvp",
+            "moduleName": "CustomVideoPlayer",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvg",
+                "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvg",
+                "moduleName": "CustomVideoPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+                "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "updatePlayer",
+            "printedName": "updatePlayer(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP06updateC03urly10Foundation3URLV_tF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP06updateC03urly10Foundation3URLV_tF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanupPlayer",
+            "printedName": "cleanupPlayer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP07cleanupC0yyF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP07cleanupC0yyF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toggleFullscreen",
+            "printedName": "toggleFullscreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP16toggleFullscreenyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP16toggleFullscreenyyF",
+            "moduleName": "CustomVideoPlayer",
+            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17CustomVideoPlayer0bC6VMTypeP",
+        "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoPlayerViewModel",
+        "printedName": "VideoPlayerViewModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isPlaying",
+            "printedName": "isPlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvp",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvp",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvg",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvg",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvs",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvs",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvM",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvM",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$isPlaying",
+            "printedName": "$isPlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvp",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvp",
+            "moduleName": "CustomVideoPlayer",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvg",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvg",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvs",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvs",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_GvM",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_GvM",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "updatePlayer",
+            "printedName": "updatePlayer(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC06updateC03urly10Foundation3URLV_tF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC06updateC03urly10Foundation3URLV_tF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "togglePlayPause",
+            "printedName": "togglePlayPause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC15togglePlayPauseyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC15togglePlayPauseyyF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanupPlayer",
+            "printedName": "cleanupPlayer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC07cleanupC0yyF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC07cleanupC0yyF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toggleFullscreen",
+            "printedName": "toggleFullscreen()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC16toggleFullscreenyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC16toggleFullscreenyyF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "play",
+            "printedName": "play()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC4playyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC4playyyF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pause",
+            "printedName": "pause()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC5pauseyyF",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC5pauseyyF",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoPlayerViewModel",
+                "printedName": "CustomVideoPlayer.VideoPlayerViewModel",
+                "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel(im)init",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelCACycfc",
+            "moduleName": "CustomVideoPlayer",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel",
+        "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "VideoPlayerVMType",
+            "printedName": "VideoPlayerVMType",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoConfig",
+        "printedName": "VideoConfig",
+        "declKind": "Struct",
+        "usr": "s:17CustomVideoPlayer0B6ConfigV",
+        "mangledName": "$s17CustomVideoPlayer0B6ConfigV",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -811,751 +1556,6 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "AVKit",
-        "printedName": "AVKit",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VideoPlayerVMType",
-        "printedName": "VideoPlayerVMType",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "play",
-            "printedName": "play()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP4playyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP4playyyF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pause",
-            "printedName": "pause()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP5pauseyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP5pauseyyF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "togglePlayPause",
-            "printedName": "togglePlayPause()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP15togglePlayPauseyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP15togglePlayPauseyyF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "isPlaying",
-            "printedName": "isPlaying",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvp",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvp",
-            "moduleName": "CustomVideoPlayer",
-            "protocolReq": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvg",
-                "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP9isPlayingSbvg",
-                "moduleName": "CustomVideoPlayer",
-                "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-                "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-                "protocolReq": true,
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "updatePlayer",
-            "printedName": "updatePlayer(url:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP06updateC03urly10Foundation3URLV_tF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP06updateC03urly10Foundation3URLV_tF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "cleanupPlayer",
-            "printedName": "cleanupPlayer()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP07cleanupC0yyF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP07cleanupC0yyF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "toggleFullscreen",
-            "printedName": "toggleFullscreen()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP16toggleFullscreenyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP16toggleFullscreenyyF",
-            "moduleName": "CustomVideoPlayer",
-            "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
-            "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:17CustomVideoPlayer0bC6VMTypeP",
-        "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP",
-        "moduleName": "CustomVideoPlayer",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VideoPlayerViewModel",
-        "printedName": "VideoPlayerViewModel",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "isPlaying",
-            "printedName": "isPlaying",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvp",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvp",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "ProjectedValueProperty",
-              "AccessControl",
-              "Custom"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvg",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvg",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvs",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvs",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "intro_Macosx": "10.15",
-                "intro_iOS": "13.0",
-                "intro_tvOS": "13.0",
-                "intro_watchOS": "6.0",
-                "declAttributes": [
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvM",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC9isPlayingSbvM",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "intro_Macosx": "10.15",
-                "intro_iOS": "13.0",
-                "intro_tvOS": "13.0",
-                "intro_watchOS": "6.0",
-                "declAttributes": [
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "$isPlaying",
-            "printedName": "$isPlaying",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Publisher",
-                "printedName": "Combine.Published<Swift.Bool>.Publisher",
-                "usr": "s:7Combine9PublishedV9PublisherV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvp",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvp",
-            "moduleName": "CustomVideoPlayer",
-            "implicit": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Publisher",
-                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
-                    "usr": "s:7Combine9PublishedV9PublisherV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvg",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvg",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Publisher",
-                    "printedName": "Combine.Published<Swift.Bool>.Publisher",
-                    "usr": "s:7Combine9PublishedV9PublisherV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvs",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_Gvs",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "intro_Macosx": "11.0",
-                "intro_iOS": "14.0",
-                "intro_tvOS": "14.0",
-                "intro_watchOS": "7.0",
-                "declAttributes": [
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_GvM",
-                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC10$isPlaying7Combine9PublishedV9PublisherVySb_GvM",
-                "moduleName": "CustomVideoPlayer",
-                "implicit": true,
-                "intro_Macosx": "11.0",
-                "intro_iOS": "14.0",
-                "intro_tvOS": "14.0",
-                "intro_watchOS": "7.0",
-                "declAttributes": [
-                  "Available",
-                  "Available",
-                  "Available",
-                  "Available"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "updatePlayer",
-            "printedName": "updatePlayer(url:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC06updateC03urly10Foundation3URLV_tF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC06updateC03urly10Foundation3URLV_tF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "togglePlayPause",
-            "printedName": "togglePlayPause()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC15togglePlayPauseyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC15togglePlayPauseyyF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "cleanupPlayer",
-            "printedName": "cleanupPlayer()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC07cleanupC0yyF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC07cleanupC0yyF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "toggleFullscreen",
-            "printedName": "toggleFullscreen()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC16toggleFullscreenyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC16toggleFullscreenyyF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "play",
-            "printedName": "play()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC4playyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC4playyyF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "pause",
-            "printedName": "pause()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:17CustomVideoPlayer0bC9ViewModelC5pauseyyF",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC5pauseyyF",
-            "moduleName": "CustomVideoPlayer",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoPlayerViewModel",
-                "printedName": "CustomVideoPlayer.VideoPlayerViewModel",
-                "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel(im)init",
-            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelCACycfc",
-            "moduleName": "CustomVideoPlayer",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerViewModel",
-        "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC",
-        "moduleName": "CustomVideoPlayer",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "hasMissingDesignatedInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "ObservableObject",
-            "printedName": "ObservableObject",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ObjectWillChangePublisher",
-                "printedName": "ObjectWillChangePublisher",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ObservableObjectPublisher",
-                    "printedName": "Combine.ObservableObjectPublisher",
-                    "usr": "s:7Combine25ObservableObjectPublisherC"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:7Combine16ObservableObjectP",
-            "mangledName": "$s7Combine16ObservableObjectP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "VideoPlayerVMType",
-            "printedName": "VideoPlayerVMType",
-            "usr": "s:17CustomVideoPlayer0bC6VMTypeP",
-            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VideoConfig",
-        "printedName": "VideoConfig",
-        "declKind": "Struct",
-        "usr": "s:17CustomVideoPlayer0B6ConfigV",
-        "mangledName": "$s17CustomVideoPlayer0B6ConfigV",
-        "moduleName": "CustomVideoPlayer",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -1905,6 +1905,30 @@
             "mangledName": "$ss9EscapableP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "Import",
+        "name": "DoveRunnerFairPlay",
+        "printedName": "DoveRunnerFairPlay",
+        "declKind": "Import",
+        "moduleName": "CustomVideoPlayer"
       },
       {
         "kind": "Import",
@@ -2767,30 +2791,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "Import",
-        "name": "DoveRunnerFairPlay",
-        "printedName": "DoveRunnerFairPlay",
-        "declKind": "Import",
-        "moduleName": "CustomVideoPlayer"
-      },
-      {
-        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -2852,20 +2852,6 @@
     "json_format_version": 8
   },
   "ConstValues": [
-    {
-      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/VideoPlayerUIView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 186,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/VideoPlayerUIView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 483,
-      "length": 5,
-      "value": "false"
-    },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
@@ -3051,23 +3037,37 @@
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 25999,
+      "offset": 26015,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 39340,
+      "offset": 39356,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 39381,
+      "offset": 39397,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/VideoPlayerUIView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 186,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/VideoPlayerUIView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 483,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/CustomVideoPlayer\/CustomVideoPlayer\/Sources\/VideoPlaybackService.swift",
