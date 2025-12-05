@@ -64,15 +64,6 @@ public struct VideoConfig {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
-public enum VideoPlayerState {
-  case idle
-  case readyToPlay
-  case playing
-  case paused
-  case buffering
-  case finished
-  case failed(error: (any Swift.Error)?)
-}
 public struct VideoPlayerCredentials {
   public let contentId: Swift.String
   public let packageName: Swift.String
@@ -102,4 +93,13 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
   public static func getDeviceId() -> Swift.String
   public static func clearAuthTokens()
   @objc deinit
+}
+public enum VideoPlayerState {
+  case idle
+  case readyToPlay
+  case playing
+  case paused
+  case buffering
+  case finished
+  case failed(error: (any Swift.Error)?)
 }
