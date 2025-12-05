@@ -168,43 +168,171 @@ Protocol for receiving video player events.
 This section explains how to integrate the CustomVideoPlayer inside your UIKit project using UIViewController and VideoPlayerUIView.
 
 ▶️ Example Usage (UIKit)
+
 import UIKit
-import SwiftUI
 import CustomVideoPlayer
-
-class ViewController: UIViewController, VideoPlayerSDKDelegate {
-
-    @IBOutlet weak var videoPl: VideoPlayerUIView!
-
+class ViewController: UIViewController ,VideoPlayerSDKDelegate{
+    
+    
+    @IBOutlet weak var videplayer: VideoPlayerUIView!
+    
+    @IBOutlet weak var playpausebtnOutlet: UIButton!
+    
+    @IBOutlet weak var Listtableview: UITableView!
+    let videoList: [String] = [
+        "hls,
+        "hls"
+    ]
+    let liveDRM: [String] = [
+        "<content_id>",
+               "<content_id>",
+                "<content_id>",
+    ]
+    let packagename = "packagename"
+    var vm : VideoPlayerVMType?
+    var isfullsreem:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // For DRM / Live content
-        // videoPl.credentials = VideoPlayerCredentials(
-        //     contentId: "<Content-ID>",
-        //     packageName: "<Package-Name>"
-        // )
-
-        // For normal HLS playback (use either credentials OR streamURL)
-        videoPl.streamURL = URL(string: "<Your-HLS-URL>")
-        videoPl.autoplay = true
-        videoPl.playerDelegate = self
+        Listtableview.dataSource = self
+        Listtableview.delegate = self
+        
+        navigationController?.isNavigationBarHidden = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        loadVideo(urlString: videoList.first!)  // for hls url
+        loadVideo(contentid: liveDRM.first!, packageName: packagename)  //for live drm contnet
+    }
+    func loadVideo(urlString: String) {
 
-    // MARK: - VideoPlayerSDKDelegate Methods
+        guard let url = URL(string: urlString) else { return }
+        
+        videplayer.streamURL = url
+        videplayer.autoplay = true
+        videplayer.playerDelegate = self
+        
+        
+        videplayer.onViewModel = { model in
+            self.vm = model
+        }
+    }
+    func loadVideo(contentid: String, packageName:String) {
+        videplayer.credentials = VideoPlayerCredentials(contentId: contentid, packageName: packageName)
+                
+        videplayer.autoplay = true
+        videplayer.playerDelegate = self
 
-    func videoDidPlay() { }
-    func videoDidPause() { }
-    func videoDidFinish() { }
-
-    func videoDidFail(with error: Error) { }
-
-    func fullscreenChanged(isFullscreen: Bool) { }
-
-    // Optional Methods (if implemented in extension)
-    // func videoPlayer(didUpdateState state: VideoPlayerState) {}
-    // func videoPlayer(didUpdateTime current: Double, duration: Double) {}
+        videplayer.onViewModel = { model in
+            self.vm = model
+        }
+    }
+    
+    @IBAction func playpausbtn(_ sender: UIButton) {
+        vm?.togglePlayPause()
+    }
+    
+    @IBAction func backaction(_ sender: UIButton) {
+        if isfullsreem{
+            vm?.toggleFullscreen()
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    
+    func videoDidPlay() {
+        
+    }
+    
+    func videoDidPause() {
+        
+    }
+    
+    func videoDidFinish() {
+        
+    }
+    
+    func videoDidFail(with error: any Error) {
+        
+    }
+    
+    func fullscreenChanged(isFullscreen: Bool) {
+        print(isFullscreen, "osfukervf")
+        
+        if isFullscreen {
+            isfullsreem = true
+            playpausebtnOutlet.isHidden = true
+            Listtableview.isHidden = true
+        }else{
+            isfullsreem = false
+            playpausebtnOutlet.isHidden = false
+            Listtableview.isHidden = false
+        }
+    }
+    
+    
 }
+
+extension ViewController : UITableViewDataSource,UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return videoList.count // hls player
+        return liveDRM.count // drm conent
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableviewCell",
+                                                       for: indexPath) as? ListTableviewCell else {
+            return UITableViewCell()
+        }
+        
+        
+//        let url = videoList[indexPath.row] // for hls
+        let url = liveDRM[indexPath.row] // for drm
+        cell.textLabel?.text = "Video \(indexPath.row + 1)"
+        cell.detailTextLabel?.text = url
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //        let selectedURL = videoList[indexPath.row] // for hls
+        let selectedURL = liveDRM[indexPath.row]  // for drm
+        print("Selected URL:", selectedURL)
+        
+        //MARK:  HLS PLAYER
+                if let url = URL(string: selectedURL){
+                    DispatchQueue.main.async(execute: {
+                        self.vm?.updatePlayer(url: url)
+        
+                    })
+        
+                }
+        //MARK:  LIVE PLAYER
+        
+        DispatchQueue.main.async(execute: {
+            self.vm?.updateDRMChannel(contentId: selectedURL, packageName: self.packagename)
+            
+        })
+        
+    }
+    
+    
+}
+    
+    
+
+
+
+
+class ListTableviewCell : UITableViewCell{
+    
+    override class func awakeFromNib() {
+        
+    }
+}
+
 
 📌 Important Notes for UIKit
 
