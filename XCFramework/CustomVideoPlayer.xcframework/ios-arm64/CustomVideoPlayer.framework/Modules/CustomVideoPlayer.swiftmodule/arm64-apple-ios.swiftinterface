@@ -22,6 +22,7 @@ public protocol VideoPlayerVMType {
   func togglePlayPause()
   var isPlaying: Swift.Bool { get }
   func updatePlayer(url: Foundation.URL)
+  func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
   func cleanupPlayer()
   func toggleFullscreen()
 }
@@ -39,6 +40,7 @@ public protocol VideoPlayerVMType {
     set
   }
   public func updatePlayer(url: Foundation.URL)
+  public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
   @objc deinit
   public func togglePlayPause()
   public func cleanupPlayer()
@@ -93,7 +95,7 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
   public func seasonButtonClick()
 }
 @_hasMissingDesignatedInitializers public class VideoPlayerSDK {
-  public static func createPlayerView(credentials: CustomVideoPlayer.VideoPlayerCredentials, autoplay: Swift.Bool = false, delegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)? = nil, addUrl: Swift.String? = nil, addStatus: Swift.Bool? = nil, onViewModelReady: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)? = nil) -> some SwiftUICore.View
+  public static func createPlayerView(credentials: CustomVideoPlayer.VideoPlayerCredentials, autoplay: Swift.Bool = false, delegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)? = nil, onViewModelReady: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)? = nil) -> some SwiftUICore.View
   
   public static func createPlayerView(streamURL: Foundation.URL, autoplay: Swift.Bool = false, delegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)? = nil, onViewModelReady: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)? = nil) -> some SwiftUICore.View
   
