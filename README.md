@@ -333,6 +333,56 @@ class ListTableviewCell : UITableViewCell{
     }
 }
 
+📌 Firebase Analytics Integration Guide
+
+Follow the steps below to integrate Firebase Analytics into your iOS project.
+
+🔧 1. Add Dependency
+
+Add the Firebase iOS SDK via Swift Package Manager:
+
+https://github.com/firebase/firebase-ios-sdk.git
+
+Select:
+
+FirebaseAnalytics
+📂 2. Add GoogleService-Info.plist
+Download GoogleService-Info.plist from the Firebase Console
+Drag & drop it into your Xcode project
+Ensure it is added to the correct target
+🛠 3. Configure AppDelegate
+
+Update your AppDelegate.swift:
+
+import UIKit
+import FirebaseCore
+import FirebaseAnalytics
+import CustomVideoPlayer
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        
+        // Initialize Firebase
+        FirebaseApp.configure()
+        
+        // Set Analytics Service
+        PlayerAnalyticsManager.shared = FirebaseAnalyticsService()
+        
+        return true
+    }
+}
+📊 4. Create Analytics Service
+final class FirebaseAnalyticsService: AnalyticsTracking {
+    
+    func logEvent(_ name: String, parameters: [String: Any]?) {
+        Analytics.logEvent(name, parameters: parameters)
+    }
+}
 
 📌 Important Notes for UIKit
 
