@@ -58,9 +58,15 @@ public protocol VideoPlayerVMType {
   var isPlaying: Swift.Bool { get }
   func updatePlayer(url: Foundation.URL)
   func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  func updateDRMChannel(contentId: Swift.String, packageName: Swift.String, userid: Swift.String?)
+  #endif
   func cleanupPlayer()
   func toggleFullscreen()
   func CloseSeasonview()
+}
+extension CustomVideoPlayer.VideoPlayerVMType {
+  public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
 }
 @objc @_hasMissingDesignatedInitializers public class VideoPlayerViewModel : ObjectiveC.NSObject, Foundation.ObservableObject {
   @Combine.Published @_projectedValueProperty($isPlaying) public var isPlaying: Swift.Bool {
@@ -76,7 +82,9 @@ public protocol VideoPlayerVMType {
     set
   }
   public func updatePlayer(url: Foundation.URL)
-  public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String, userid: Swift.String? = nil)
+  #endif
   @objc deinit
   public func togglePlayPause()
   public func cleanupPlayer()
@@ -103,8 +111,9 @@ public struct VideoPlayerCredentials {
   public let contentId: Swift.String
   public let packageName: Swift.String
   public let deviceId: Swift.String?
+  public let userid: Swift.String?
   #if compiler(>=5.3) && $NonescapableTypes
-  public init(contentId: Swift.String, packageName: Swift.String, deviceId: Swift.String? = nil)
+  public init(contentId: Swift.String, packageName: Swift.String, deviceId: Swift.String? = nil, userid: Swift.String? = nil)
   #endif
 }
 public protocol VideoPlayerSDKDelegate {
@@ -124,7 +133,7 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
 }
 @_hasMissingDesignatedInitializers public class VideoPlayerSDK {
   #if compiler(>=5.3) && $NonescapableTypes
-  public static func createPlayerView(credentials: CustomVideoPlayer.VideoPlayerCredentials, autoplay: Swift.Bool = false, delegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)? = nil, onViewModelReady: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)? = nil) -> some SwiftUICore.View
+  public static func createPlayerView(credentials: CustomVideoPlayer.VideoPlayerCredentials, autoplay: Swift.Bool = false, delegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)? = nil, userid: Swift.String? = nil, onViewModelReady: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)? = nil) -> some SwiftUICore.View
   
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
@@ -140,6 +149,7 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
   @_Concurrency.MainActor @preconcurrency public var streamURL: Foundation.URL?
   @_Concurrency.MainActor @preconcurrency public var autoplay: Swift.Bool
   @_Concurrency.MainActor @preconcurrency public var playerDelegate: (any CustomVideoPlayer.VideoPlayerSDKDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var userid: Swift.String?
   @_Concurrency.MainActor @preconcurrency public var onViewModel: ((any CustomVideoPlayer.VideoPlayerVMType) -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   #if compiler(>=5.3) && $NonescapableTypes
