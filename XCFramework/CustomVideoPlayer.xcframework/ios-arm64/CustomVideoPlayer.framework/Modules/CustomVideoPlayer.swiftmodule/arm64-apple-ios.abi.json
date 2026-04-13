@@ -1221,6 +1221,121 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Var",
+            "name": "projecttype",
+            "printedName": "projecttype",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CustomVideoPlayer.Projecttype?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Projecttype",
+                    "printedName": "CustomVideoPlayer.Projecttype",
+                    "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvp",
+            "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvp",
+            "moduleName": "CustomVideoPlayer",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CustomVideoPlayer.Projecttype?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvg",
+                "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvg",
+                "moduleName": "CustomVideoPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+                "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CustomVideoPlayer.Projecttype?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvs",
+                "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvs",
+                "moduleName": "CustomVideoPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+                "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvM",
+                "mangledName": "$s17CustomVideoPlayer0bC6VMTypeP11projecttypeAA11ProjecttypeOSgvM",
+                "moduleName": "CustomVideoPlayer",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomVideoPlayer.VideoPlayerVMType>",
+                "sugared_genericSig": "<Self where Self : CustomVideoPlayer.VideoPlayerVMType>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "updateDRMChannel",
             "printedName": "updateDRMChannel(contentId:packageName:)",
@@ -1488,6 +1603,116 @@
                   "Available",
                   "Available"
                 ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "projecttype",
+            "printedName": "projecttype",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CustomVideoPlayer.Projecttype?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Projecttype",
+                    "printedName": "CustomVideoPlayer.Projecttype",
+                    "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvp",
+            "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvp",
+            "moduleName": "CustomVideoPlayer",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CustomVideoPlayer.Projecttype?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvg",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvg",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CustomVideoPlayer.Projecttype?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvs",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvs",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvM",
+                "mangledName": "$s17CustomVideoPlayer0bC9ViewModelC11projecttypeAA11ProjecttypeOSgvM",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -2847,6 +3072,8 @@
         "usr": "s:17CustomVideoPlayer0bC11SDKDelegateP",
         "mangledName": "$s17CustomVideoPlayer0bC11SDKDelegateP",
         "moduleName": "CustomVideoPlayer",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
           "RawDocComment"
@@ -3147,6 +3374,220 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "CustomVideoPlayer"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Projecttype",
+        "printedName": "Projecttype",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "Uikit",
+            "printedName": "Uikit",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CustomVideoPlayer.Projecttype.Type) -> CustomVideoPlayer.Projecttype",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Projecttype",
+                    "printedName": "CustomVideoPlayer.Projecttype",
+                    "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CustomVideoPlayer.Projecttype.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17CustomVideoPlayer11ProjecttypeO5UikityA2CmF",
+            "mangledName": "$s17CustomVideoPlayer11ProjecttypeO5UikityA2CmF",
+            "moduleName": "CustomVideoPlayer"
+          },
+          {
+            "kind": "Var",
+            "name": "Swiftui",
+            "printedName": "Swiftui",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CustomVideoPlayer.Projecttype.Type) -> CustomVideoPlayer.Projecttype",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Projecttype",
+                    "printedName": "CustomVideoPlayer.Projecttype",
+                    "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CustomVideoPlayer.Projecttype.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Projecttype",
+                        "printedName": "CustomVideoPlayer.Projecttype",
+                        "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17CustomVideoPlayer11ProjecttypeO7SwiftuiyA2CmF",
+            "mangledName": "$s17CustomVideoPlayer11ProjecttypeO7SwiftuiyA2CmF",
+            "moduleName": "CustomVideoPlayer"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Projecttype",
+                "printedName": "CustomVideoPlayer.Projecttype",
+                "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Projecttype",
+                "printedName": "CustomVideoPlayer.Projecttype",
+                "usr": "s:17CustomVideoPlayer11ProjecttypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer11ProjecttypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17CustomVideoPlayer11ProjecttypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "CustomVideoPlayer",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17CustomVideoPlayer11ProjecttypeO9hashValueSivp",
+            "mangledName": "$s17CustomVideoPlayer11ProjecttypeO9hashValueSivp",
+            "moduleName": "CustomVideoPlayer",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17CustomVideoPlayer11ProjecttypeO9hashValueSivg",
+                "mangledName": "$s17CustomVideoPlayer11ProjecttypeO9hashValueSivg",
+                "moduleName": "CustomVideoPlayer",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CustomVideoPlayer11ProjecttypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17CustomVideoPlayer11ProjecttypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "CustomVideoPlayer",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17CustomVideoPlayer11ProjecttypeO",
+        "mangledName": "$s17CustomVideoPlayer11ProjecttypeO",
+        "moduleName": "CustomVideoPlayer",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -3867,8 +4308,7 @@
               "Preconcurrency",
               "Custom",
               "AccessControl",
-              "Override",
-              "RawDocComment"
+              "Override"
             ],
             "init_kind": "Designated"
           },
@@ -3916,6 +4356,34 @@
           },
           {
             "kind": "Function",
+            "name": "didMoveToWindow",
+            "printedName": "didMoveToWindow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CustomVideoPlayer@objc(cs)VideoPlayerUIView(im)didMoveToWindow",
+            "mangledName": "$s17CustomVideoPlayer0bC6UIViewC15didMoveToWindowyyF",
+            "moduleName": "CustomVideoPlayer",
+            "overriding": true,
+            "objc_name": "didMoveToWindow",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "layoutSubviews",
             "printedName": "layoutSubviews()",
             "children": [
@@ -3951,6 +4419,7 @@
           "Preconcurrency",
           "Custom",
           "AccessControl",
+          "RawDocComment",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)UIView",
@@ -4194,63 +4663,56 @@
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 921,
+      "offset": 967,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 965,
+      "offset": 1011,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1005,
+      "offset": 1051,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1047,
+      "offset": 1093,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1085,
+      "offset": 1131,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1130,
+      "offset": 1176,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1175,
+      "offset": 1221,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1216,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1261,
+      "offset": 1262,
       "length": 5,
       "value": "false"
     },
@@ -4265,153 +4727,160 @@
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
       "offset": 1353,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1399,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Array",
-      "offset": 1408,
+      "offset": 1454,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Array",
-      "offset": 1500,
+      "offset": 1546,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Array",
-      "offset": 1553,
+      "offset": 1599,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Dictionary",
-      "offset": 2017,
+      "offset": 2063,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Dictionary",
-      "offset": 2089,
+      "offset": 2135,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "Dictionary",
-      "offset": 2145,
+      "offset": 2191,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2256,
+      "offset": 2302,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2304,
+      "offset": 2350,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 2520,
+      "offset": 2566,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "FloatLiteral",
-      "offset": 2396,
+      "offset": 2442,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2579,
+      "offset": 2625,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2621,
+      "offset": 2667,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3198,
+      "offset": 3290,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3228,
+      "offset": 3320,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 3361,
+      "offset": 3453,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3456,
+      "offset": 3548,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3558,
+      "offset": 3650,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 33672,
+      "offset": 33920,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47129,
+      "offset": 47391,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47170,
+      "offset": 47432,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoPlayerViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 47568,
+      "offset": 47830,
       "length": 5,
       "value": "false"
     },
@@ -4453,91 +4922,84 @@
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3048,
+      "offset": 3173,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3145,
+      "offset": 3270,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3207,
+      "offset": 3332,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3322,
+      "offset": 3447,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "FloatLiteral",
-      "offset": 19962,
+      "offset": 21998,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/Sources\/VideoView.swift",
       "kind": "BooleanLiteral",
-      "offset": 27851,
+      "offset": 29887,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/CustomVideoPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1989,
+      "offset": 2000,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/CustomVideoPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 2986,
+      "offset": 3007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/CustomVideoPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4592,
+      "offset": 4613,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/CustomVideoPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 4802,
+      "offset": 4823,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/VideoPlayerUIView.swift",
       "kind": "BooleanLiteral",
-      "offset": 186,
+      "offset": 4720,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/VideoPlayerUIView.swift",
       "kind": "BooleanLiteral",
-      "offset": 317,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/ishpreet-multitv\/Desktop\/Projects\/ios_player_sdk\/CustomVideoPlayer\/VideoPlayerUIView.swift",
-      "kind": "BooleanLiteral",
-      "offset": 530,
+      "offset": 4970,
       "length": 5,
       "value": "false"
     },

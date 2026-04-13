@@ -64,6 +64,9 @@ public protocol VideoPlayerVMType {
   func cleanupPlayer()
   func toggleFullscreen()
   func CloseSeasonview()
+  #if compiler(>=5.3) && $NonescapableTypes
+  var projecttype: CustomVideoPlayer.Projecttype? { get set }
+  #endif
 }
 extension CustomVideoPlayer.VideoPlayerVMType {
   public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String)
@@ -81,6 +84,7 @@ extension CustomVideoPlayer.VideoPlayerVMType {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
+  public var projecttype: CustomVideoPlayer.Projecttype?
   public func updatePlayer(url: Foundation.URL)
   #if compiler(>=5.3) && $NonescapableTypes
   public func updateDRMChannel(contentId: Swift.String, packageName: Swift.String, userid: Swift.String? = nil)
@@ -116,7 +120,7 @@ public struct VideoPlayerCredentials {
   public init(contentId: Swift.String, packageName: Swift.String, deviceId: Swift.String? = nil, userid: Swift.String? = nil)
   #endif
 }
-public protocol VideoPlayerSDKDelegate {
+public protocol VideoPlayerSDKDelegate : AnyObject {
   func videoDidPlay()
   func videoDidPause()
   func videoDidFinish()
@@ -144,6 +148,15 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
   public static func clearAuthTokens()
   @objc deinit
 }
+public enum Projecttype {
+  case Uikit
+  case Swiftui
+  public static func == (a: CustomVideoPlayer.Projecttype, b: CustomVideoPlayer.Projecttype) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VideoPlayerUIView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public var credentials: CustomVideoPlayer.VideoPlayerCredentials?
   @_Concurrency.MainActor @preconcurrency public var streamURL: Foundation.URL?
@@ -155,9 +168,12 @@ extension CustomVideoPlayer.VideoPlayerSDKDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
   #endif
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @objc deinit
 }
 extension CustomVideoPlayer.PlayerEvent : Swift.Equatable {}
 extension CustomVideoPlayer.PlayerEvent : Swift.Hashable {}
 extension CustomVideoPlayer.PlayerEvent : Swift.RawRepresentable {}
+extension CustomVideoPlayer.Projecttype : Swift.Equatable {}
+extension CustomVideoPlayer.Projecttype : Swift.Hashable {}

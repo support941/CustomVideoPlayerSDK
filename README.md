@@ -200,6 +200,30 @@ class ViewController: UIViewController ,VideoPlayerSDKDelegate{
         navigationController?.isNavigationBarHidden = true
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        if isfullsreem && UIDevice.current.userInterfaceIdiom == .pad {
+            videopl.frame = view.bounds
+        }
+    }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            coordinator.animate(alongsideTransition: { _ in
+                if self.isfullsreem {
+                    self.videopl.frame = CGRect(origin: .zero, size: size)
+                }
+            })
+        }
+       
+    }
+    
+
+    
+   
     override func viewWillAppear(_ animated: Bool) {
 //        loadVideo(urlString: videoList.first!)  // for hls url
         loadVideo(contentid: liveDRM.first!, packageName: packagename)  //for live drm contnet
@@ -264,10 +288,28 @@ class ViewController: UIViewController ,VideoPlayerSDKDelegate{
             isfullsreem = true
             playpausebtnOutlet.isHidden = true
             Listtableview.isHidden = true
+            
+                      //make sure this should be added  then ipad work well
+                                
+            if UIDevice.current.userInterfaceIdiom == .pad {
+               videplayer.translatesAutoresizingMaskIntoConstraints = true
+                videplayer.frame = view.bounds
+                view.bringSubviewToFront(videplayer)
+            }
         }else{
+        
+        
             isfullsreem = false
             playpausebtnOutlet.isHidden = false
             Listtableview.isHidden = false
+            
+             //make sure this should be added  then ipad work well
+                
+            if UIDevice.current.userInterfaceIdiom == .pad {
+              videplayer.translatesAutoresizingMaskIntoConstraints = false
+                view.setNeedsLayout()
+                view.layoutIfNeeded()
+            }
         }
     }
     
