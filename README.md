@@ -140,6 +140,160 @@ struct ContentView: View {
 }
 ```
 
+## Customization (Latest)
+
+You can now customize title, player controls, and settings overlay from outside the SDK.
+
+### What You Can Customize
+
+- `title` and `titleColor`
+- `controlsAppearance`
+  - icon image and tint for:
+    - `rewind`, `play`, `pause`, `replay`, `forward`
+    - `fullscreen`, `settings`, `fill`, `unfill`
+    - `season`, `brightness`, `volume`, `mute`, `close`
+  - global fallback via `defaultTintColor`
+- `settingsOverlayAppearance`
+  - colors, fonts, radius, shadow, selected/unselected chip style
+- `settingsOptionsConfig`
+  - speed list
+  - row order (`.quality`, `.speed`, `.language`, `.subtitle`)
+  - show/hide flags per row
+- `settingsTextConfig`
+  - title and row labels (localization friendly)
+
+### SwiftUI Customization Example
+
+```swift
+import SwiftUI
+import UIKit
+import CustomVideoPlayer
+
+struct CustomizedPlayerView: View {
+    @State private var viewModel: VideoPlayerVMType?
+
+    private let controlsAppearance: PlayerControlsAppearance = {
+        var appearance = PlayerControlsAppearance()
+        appearance.defaultTintColor = .white
+        appearance.play = .init(
+            image: UIImage(systemName: "play.fill")?.withRenderingMode(.alwaysTemplate),
+            tintColor: .systemYellow
+        )
+        appearance.pause = .init(tintColor: .systemGreen)
+        appearance.settings = .init(tintColor: .systemOrange)
+        appearance.fullscreen = .init(tintColor: .systemCyan)
+        return appearance
+    }()
+
+    private let settingsOverlayAppearance: SettingsOverlayAppearance = {
+        var appearance = SettingsOverlayAppearance()
+        appearance.backgroundColor = UIColor.black.withAlphaComponent(0.55)
+        appearance.titleColor = .systemYellow
+        appearance.rowTitleColor = .lightGray
+        appearance.chipSelectedBackgroundColor = .systemBlue
+        appearance.chipSelectedTextColor = .white
+        appearance.chipUnselectedBackgroundColor = UIColor.darkGray.withAlphaComponent(0.45)
+        appearance.chipUnselectedTextColor = .white
+        return appearance
+    }()
+
+    private let settingsOptionsConfig = SettingsOptionsConfig(
+        speedOptions: ["0.75x", "1x", "1.25x", "1.5x", "2x"],
+        rowOrder: [.speed, .quality, .language, .subtitle],
+        showQuality: true,
+        showSpeed: true,
+        showLanguage: true,
+        showSubtitle: true
+    )
+
+    private let settingsTextConfig = SettingsTextConfig(
+        title: "Playback Settings",
+        qualityLabel: "Video Quality",
+        speedLabel: "Speed",
+        languageLabel: "Audio",
+        subtitleLabel: "Captions"
+    )
+
+    var body: some View {
+        VideoPlayerSDK.createPlayerView(
+            credentials: VideoPlayerCredentials(
+                contentId: "dangal",
+                packageName: "com.dangalplay.tv"
+            ),
+            autoplay: false,
+            title: "Demo Title",
+            titleColor: .white,
+            controlsAppearance: controlsAppearance,
+            settingsOverlayAppearance: settingsOverlayAppearance,
+            settingsOptionsConfig: settingsOptionsConfig,
+            settingsTextConfig: settingsTextConfig
+        ) { vm in
+            viewModel = vm
+        }
+    }
+}
+```
+
+### UIKit Customization Example
+
+```swift
+import UIKit
+import CustomVideoPlayer
+
+final class ViewController: UIViewController {
+    @IBOutlet private weak var videoPlayerView: VideoPlayerUIView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        videoPlayerView.credentials = VideoPlayerCredentials(
+            contentId: "dangal",
+            packageName: "com.dangalplay.tv"
+        )
+        videoPlayerView.autoplay = true
+
+        videoPlayerView.title = "Demo Title"
+        videoPlayerView.titleColor = .white
+
+        var controlsAppearance = PlayerControlsAppearance()
+        controlsAppearance.defaultTintColor = .white
+        controlsAppearance.play = .init(tintColor: .systemYellow)
+        controlsAppearance.pause = .init(tintColor: .systemGreen)
+        controlsAppearance.settings = .init(tintColor: .systemOrange)
+        videoPlayerView.controlsAppearance = controlsAppearance
+
+        var settingsAppearance = SettingsOverlayAppearance()
+        settingsAppearance.backgroundColor = UIColor.black.withAlphaComponent(0.55)
+        settingsAppearance.titleColor = .systemYellow
+        videoPlayerView.settingsOverlayAppearance = settingsAppearance
+
+        videoPlayerView.settingsOptionsConfig = SettingsOptionsConfig(
+            speedOptions: ["1x", "1.25x", "1.5x", "2x"],
+            rowOrder: [.quality, .speed, .language, .subtitle],
+            showSubtitle: true
+        )
+
+        videoPlayerView.settingsTextConfig = SettingsTextConfig(
+            title: "Settings",
+            qualityLabel: "Quality",
+            speedLabel: "Speed",
+            languageLabel: "Language",
+            subtitleLabel: "Subtitle"
+        )
+    }
+}
+```
+
+### Fallback Behavior
+
+- All customization parameters are optional.
+- If you do not pass customization values, SDK default look is used.
+- If a custom icon image is not provided, default SDK icon is used.
+- Tint fallback order for control icons:
+  - control-specific tint
+  - `defaultTintColor`
+  - SDK internal fallback color
+
 
 ### VideoPlayerCredentials
 
@@ -456,7 +610,6 @@ Only one of the following should be used at a time:
 - Controls automatically hide after 8 seconds of inactivity
 
 ## License
-
 
 
 
